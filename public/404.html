@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada | Void Arcade</title>
+<meta name="description" content="Esta página no existe. Vuelve al inicio de Void Arcade para ver tarifas, menú y horarios.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0E1A20">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/styles.css">
+<style>
+  .err {
+    min-height: 100svh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    gap: 18px; padding: 48px 16px;
+    background: radial-gradient(120% 90% at 50% 0%, #16323C 0%, var(--bg) 62%);
+  }
+  .err__code {
+    margin: 0; font-family: var(--f-display);
+    font-size: clamp(64px, 22vw, 120px); line-height: .9; color: var(--accent);
+  }
+  .err__title { margin: 0; font-family: var(--f-display); font-size: clamp(22px, 6vw, 32px); }
+  .err__actions { width: 100%; max-width: 360px; display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+</style>
+</head>
+<body>
+  <main class="err">
+    <img src="/img/logo-256.webp" alt="Void Arcade" width="96" height="96" style="border-radius:50%">
+    <p class="err__code">404</p>
+    <h1 class="err__title">Esta página no existe</h1>
+    <p class="lead" style="max-width:380px">
+      Puede que el enlace esté viejo o mal escrito. Vuelve al inicio para ver tarifas,
+      menú, horarios y reservas.
+    </p>
+    <div class="err__actions">
+      <a class="action action--primary" href="/">
+        <span class="action__label">Ir al inicio</span><span class="action__arrow">→</span>
+      </a>
+      <a class="action" href="https://wa.me/573103420856" target="_blank" rel="noopener">
+        <span class="action__label">Escríbenos por WhatsApp</span><span class="action__arrow">→</span>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
