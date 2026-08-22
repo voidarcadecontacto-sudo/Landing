@@ -1,0 +1,8 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Fuente de diseño: 139 MB de fotos originales y el runtime del editor de canvas.
+# Se queda en tu computador, no en el repositorio. Las versiones optimizadas
+# para la web viven en img/ y esas sí se versionan.
+Landing cyber sala de juegos/
