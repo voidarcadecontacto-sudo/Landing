@@ -1,0 +1,5 @@
+# Void Arcade
+User-agent: *
+Allow: /
+
+Sitemap: https://voidarcadecy.com/sitemap.xml
