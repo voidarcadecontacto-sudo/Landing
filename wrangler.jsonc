@@ -1,0 +1,12 @@
+{
+  // Configuración de Cloudflare Workers para un sitio 100% estático.
+  // No hay código de Worker: solo se sirven los archivos de public/.
+  // El asistente de Cloudflare ejecuta `npx wrangler deploy` y lee este archivo.
+  "name": "landing",
+  "compatibility_date": "2026-08-22",
+  "assets": {
+    "directory": "./public",
+    // Sirve public/404.html con código HTTP 404 cuando la ruta no existe.
+    "not_found_handling": "404-page"
+  }
+}
