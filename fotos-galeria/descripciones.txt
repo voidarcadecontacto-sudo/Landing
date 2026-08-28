@@ -1,0 +1,39 @@
+# ==========================================================================
+#  Descripciones de las fotos de la galería
+# ==========================================================================
+#
+#  Una línea por foto:
+#
+#      archivo.webp | descripción de la foto
+#
+#  La DESCRIPCIÓN es importante: es el texto "alt" de la imagen. Lo leen
+#  Google y los lectores de pantalla de personas ciegas. Describe lo que
+#  se ve de verdad — "Torneo de FIFA con la sala llena", no "foto3".
+#
+#  El ORDEN en la galería lo da el número al inicio del nombre del archivo
+#  (01-, 02-, 03-...). Para reordenar, renombra los archivos.
+#
+#  Las líneas que empiezan con # son comentarios y se ignoran.
+#
+#  --- Opcional: ajustar el recorte -------------------------------------
+#
+#  Las fotos se recortan a formato 4:3. Por defecto se toma el centro.
+#  Si una foto queda mal encuadrada, agrega un tercer campo:
+#
+#      archivo.webp | descripción | 0.3
+#           -> 0.3 = recorta más arriba   (0 = tope, 1 = fondo)
+#
+#      archivo.webp | descripción | 0.3 0.62 0.62
+#           -> vertical  horizontal  zoom
+#           -> zoom 0.62 = se acerca al 62% del encuadre original
+#
+#  Corre ./actualizar-galeria.sh y mira el resultado. Si no te gusta,
+#  cambia el número y vuelve a correr. No se daña nada.
+# ==========================================================================
+
+01-sala-neon.webp  | Sala de Void Arcade con luces neón moradas, sofás frente a dos pantallas de consola y un letrero que dice Eat Sleep Game Repeat | 0.42
+02-mario-kart.webp | Pantalla grande mostrando una partida de Mario Kart en Nintendo Switch | 0.30 0.62 0.62
+03-simulador.webp  | Jugadores en el simulador de carreras frente a una proyección de túnel de luces de neón | 0.40
+04-consolas.webp   | Zona de consolas de Void Arcade con clientes sentados jugando bajo luces moradas | 0.50
+05-bebidas.webp    | Dos vasos de bebida escarchada con pitillos azules, brindando en la barra de Void Arcade | 0.66
+06-publico.webp    | Público sentado viendo un torneo en la sala de Void Arcade | 0.50

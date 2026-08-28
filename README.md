@@ -25,6 +25,10 @@ public/                Todo lo que se publica. Esta carpeta es la raíz del siti
 ├── sitemap.xml        Mapa del sitio para Google.
 ├── site.webmanifest   Permite "añadir a pantalla de inicio" en el celular.
 └── favicon.ico        Icono de la pestaña.
+
+fotos-galeria/         Las fotos de la galería. Aquí es donde trabajas tú.
+herramientas/          Script que regenera la galería.
+actualizar-galeria.sh  Atajo para correr ese script.
 ```
 
 Todo lo que esté dentro de `public/` queda accesible en internet. Lo que esté fuera
@@ -132,9 +136,91 @@ varias veces en `public/index.html`:
 grep -rl 573103420856 public | xargs sed -i '' 's|573103420856|TU-NUMERO|g'
 ```
 
-**Fotos nuevas** → en `public/img/fotos/`, en dos tamaños (`nombre-400.webp` y
-`nombre-800.webp`), y actualiza `src`, `srcset` y `alt` en `index.html`.
-El `alt` describe la foto y Google lo lee: escribe algo real, no "foto1".
+**Fotos de la galería** → tienen su propio flujo, más abajo.
+
+---
+
+## Cambiar las fotos de la galería
+
+No edites el HTML ni toques `public/img/fotos/`. Todo se maneja desde
+`fotos-galeria/` y un comando.
+
+### Agregar fotos
+
+1. **Copia las fotos** a `fotos-galeria/`. Sirve cualquier formato (JPG, PNG,
+   HEIC del iPhone) y cualquier tamaño. Si las bajaste de Instagram, tíralas ahí
+   tal cual.
+
+2. **Nómbralas con un número al inicio.** Ese número decide el orden en que
+   aparecen:
+
+   ```
+   01-sala-neon.webp
+   02-mario-kart.webp
+   07-torneo-septiembre.jpg   ← la nueva
+   ```
+
+3. **Descríbelas** en `fotos-galeria/descripciones.txt`, una línea por foto:
+
+   ```
+   07-torneo-septiembre.jpg | Finalistas del torneo de FC 26 recibiendo sus premios
+   ```
+
+   La descripción no es decorativa: es el texto `alt` de la imagen. La leen Google
+   y los lectores de pantalla de personas ciegas. Describe lo que se ve de verdad.
+
+4. **Corre el comando:**
+
+   ```bash
+   ./actualizar-galeria.sh
+   ```
+
+5. **Míralo** antes de publicar:
+
+   ```bash
+   cd public && python3 -m http.server 8000
+   ```
+
+6. **Publícalo:**
+
+   ```bash
+   git add -A && git commit -m "Actualiza fotos de la galeria" && git push
+   ```
+
+En un par de minutos está en <https://voidarcadecy.com>.
+
+### Quitar o reordenar
+
+- **Quitar una foto:** bórrala de `fotos-galeria/` y corre el comando. El script
+  limpia solo los archivos que quedaron sueltos.
+- **Reordenar:** cambia los números del inicio del nombre y corre el comando.
+
+La regla es simple: **lo que esté en `fotos-galeria/` es lo que sale en la web.**
+
+### Si una foto queda mal encuadrada
+
+Las fotos se recortan a formato 4:3 tomando el centro. Si una queda cortada donde
+no debe, agrega un tercer campo en `descripciones.txt`:
+
+```
+07-torneo.jpg | Finalistas del torneo         | 0.3
+```
+
+`0.3` mueve el recorte hacia arriba (`0` = tope, `1` = fondo). Corre el comando,
+mira cómo quedó, ajusta el número. No se daña nada por probar.
+
+### Lo que el script hace por ti
+
+Recorta a 4:3, genera dos tamaños en WebP (400px y 800px) para que los celulares
+bajen la versión liviana y las pantallas retina la grande, escribe el `srcset` y
+las medidas que evitan que la página salte al cargar, y reescribe el bloque de la
+galería en `index.html`.
+
+Las fotos de las **tarjetas de evento** (`ganadores`, `evento-lleno`) no son parte
+de este flujo — llevan título y texto, así que se editan a mano en `index.html`.
+
+> Las fotos en `fotos-galeria/` están guardadas a 2000px y sí se versionan en Git.
+> Eso las respalda en GitHub y permite regenerar todo desde cero.
 
 ---
 
