@@ -148,22 +148,19 @@
               "@type": "Offer",
               "name": "Paquete Alfa — hasta 10 personas, 3 horas",
               "description": "Local privado, mini torneo, challenge del simulador y fotos grupales.",
-              "price": "350000",
-              "priceCurrency": "COP"
+              "availability": "https://schema.org/InStock"
             },
             {
               "@type": "Offer",
               "name": "Paquete Beta — hasta 14 personas, 4 horas",
               "description": "Local privado, torneo organizado, challenge del simulador, bebida y snack por persona, video resumen.",
-              "price": "600000",
-              "priceCurrency": "COP"
+              "availability": "https://schema.org/InStock"
             },
             {
               "@type": "Offer",
               "name": "Paquete Gamma — hasta 18 personas, 5 horas",
               "description": "Local privado, torneo principal y mini torneo, bebida y dos snacks por persona, video del evento y premio.",
-              "price": "850000",
-              "priceCurrency": "COP"
+              "availability": "https://schema.org/InStock"
             }
           ]
         }
@@ -768,45 +765,53 @@
     <div class="grid grid--paquetes">
       <article class="paquete">
         <p class="paquete__nombre">Paquete Alfa</p>
-        <p class="paquete__precio">$350.000</p>
-        <p class="paquete__meta">Hasta 10 personas · 3 horas</p>
+        <p class="paquete__capacidad">Hasta 10 personas</p>
+        <p class="paquete__meta">3 horas · local privado</p>
         <ul class="paquete__lista">
-          <li>Local para ustedes solos</li>
           <li>Mini torneo</li>
           <li>Challenge del simulador</li>
           <li>Fotos grupales</li>
+          <li>Premio de tiempo de juego</li>
         </ul>
-        <p class="paquete__abono">Reservas con <strong>$105.000</strong></p>
+        <a class="paquete__cta" href="https://wa.me/573103420856?text=%C2%A1Hola%20Void%20Arcade%21%20Quiero%20cotizar%20el%20Paquete%20Alfa%20%28hasta%2010%20personas%2C%203%20horas%29." target="_blank" rel="noopener">
+          <svg width="17" height="17" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
+          Cotizar Alfa
+        </a>
       </article>
 
       <article class="paquete paquete--destacado">
         <p class="paquete__etiqueta">El más pedido</p>
         <p class="paquete__nombre">Paquete Beta</p>
-        <p class="paquete__precio">$600.000</p>
-        <p class="paquete__meta">Hasta 14 personas · 4 horas</p>
+        <p class="paquete__capacidad">Hasta 14 personas</p>
+        <p class="paquete__meta">4 horas · local privado</p>
         <ul class="paquete__lista">
-          <li>Local para ustedes solos</li>
           <li>Torneo organizado</li>
           <li>Challenge del simulador</li>
           <li>1 bebida y 1 snack por persona</li>
           <li>Video resumen corto</li>
+          <li>Premio de tiempo de juego + snacks</li>
         </ul>
-        <p class="paquete__abono">Reservas con <strong>$180.000</strong></p>
+        <a class="paquete__cta paquete__cta--fuerte" href="https://wa.me/573103420856?text=%C2%A1Hola%20Void%20Arcade%21%20Quiero%20cotizar%20el%20Paquete%20Beta%20%28hasta%2014%20personas%2C%204%20horas%29." target="_blank" rel="noopener">
+          <svg width="17" height="17" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
+          Cotizar Beta
+        </a>
       </article>
 
       <article class="paquete">
         <p class="paquete__nombre">Paquete Gamma</p>
-        <p class="paquete__precio">$850.000</p>
-        <p class="paquete__meta">Hasta 18 personas · 5 horas</p>
+        <p class="paquete__capacidad">Hasta 18 personas</p>
+        <p class="paquete__meta">5 horas · local privado</p>
         <ul class="paquete__lista">
-          <li>Local para ustedes solos</li>
           <li>Torneo principal + mini torneo</li>
           <li>Challenge del simulador</li>
           <li>1 bebida y 2 snacks por persona</li>
           <li>Video resumen del evento</li>
-          <li>Pin o llavero de premio</li>
+          <li>Premio + pin o llavero</li>
         </ul>
-        <p class="paquete__abono">Reservas con <strong>$255.000</strong></p>
+        <a class="paquete__cta" href="https://wa.me/573103420856?text=%C2%A1Hola%20Void%20Arcade%21%20Quiero%20cotizar%20el%20Paquete%20Gamma%20%28hasta%2018%20personas%2C%205%20horas%29." target="_blank" rel="noopener">
+          <svg width="17" height="17" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
+          Cotizar Gamma
+        </a>
       </article>
     </div>
 
@@ -826,7 +831,6 @@
             </tr>
           </thead>
           <tbody>
-            <tr><th scope="row">Precio</th><td>$350.000</td><td class="is-best">$600.000</td><td>$850.000</td></tr>
             <tr><th scope="row">Personas</th><td>Hasta 10</td><td>Hasta 14</td><td>Hasta 18</td></tr>
             <tr><th scope="row">Duración</th><td>3 horas</td><td>4 horas</td><td>5 horas</td></tr>
             <tr><th scope="row">Uso privado</th><td>Sí</td><td>Sí</td><td>Sí</td></tr>
@@ -836,14 +840,12 @@
             <tr><th scope="row">Snacks</th><td class="es-nulo">No incluye</td><td>1 por persona</td><td>2 por persona</td></tr>
             <tr><th scope="row">Premios</th><td>Tiempo de juego</td><td>Tiempo de juego + snacks</td><td>Tiempo de juego + snack + pin o llavero</td></tr>
             <tr><th scope="row">Fotos y video</th><td>Fotos grupales</td><td>Fotos y video resumen corto</td><td>Fotos y video resumen del evento</td></tr>
-            <tr><th scope="row">Abono para reservar</th><td>$105.000</td><td class="is-best">$180.000</td><td>$255.000</td></tr>
           </tbody>
         </table>
       </div>
       <p class="note">
-        Se reserva con el <strong>30%</strong> y el resto se paga el día del evento.
-        ¿Prefieres verlo en PDF? Descarga la
-        <a href="/docs/fiestas-eventos.pdf" target="_blank" rel="noopener">propuesta de fiestas y eventos</a>.
+        Cada evento se cotiza según el grupo, las horas y lo que quieras incluir.
+        Se aparta con un abono y el resto se paga el día del evento.
       </p>
     </div>
 
