@@ -480,3 +480,90 @@ input:focus-visible,
   .section { padding: 44px 14px; }
   .hero { padding: 44px 14px 36px; }
 }
+
+/* --- Fiestas y eventos privados ------------------------------------------ */
+.titulo-acento { color: var(--accent); }
+.lead--ancho { max-width: 620px; margin-top: 4px; }
+
+.grid--paquetes { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+.paquete {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 8px; padding: 20px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.paquete--destacado {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 14px 34px rgba(0, 0, 0, .35);
+}
+.paquete__etiqueta {
+  align-self: flex-start; margin: 0 0 2px;
+  padding: 4px 10px; border-radius: 999px;
+  background: var(--accent); color: var(--bg);
+  font-family: var(--f-cond); font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase; font-size: 11px;
+}
+.paquete__nombre {
+  margin: 0; font-family: var(--f-cond); font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase;
+  font-size: 15px; color: var(--accent);
+}
+.paquete__precio {
+  margin: 0; font-family: var(--f-display);
+  font-size: 30px; line-height: 1; color: var(--ink);
+}
+.paquete__meta {
+  margin: 0; font-family: var(--f-cond); letter-spacing: .14em;
+  text-transform: uppercase; font-size: 13px; color: var(--ink-mute);
+}
+.paquete__lista {
+  margin: 8px 0 0; padding: 0; list-style: none;
+  display: flex; flex-direction: column; gap: 7px;
+  font-size: 15px; color: var(--ink-soft);
+}
+.paquete__lista li { position: relative; padding-left: 20px; line-height: 1.45; }
+.paquete__lista li::before {
+  content: ""; position: absolute; left: 2px; top: .52em;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent);
+}
+.paquete__abono {
+  margin: auto 0 0; padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 14px; color: var(--ink-mute);
+}
+.paquete__abono strong { color: var(--ink); font-weight: 700; }
+
+/* La comparativa tiene más columnas de texto: necesita más ancho antes de hacer scroll */
+.tabla--comparativa { min-width: 620px; }
+/* La tabla de paquetes alinea a la derecha porque son cifras; aquí las celdas
+   llevan texto, así que todo va a la izquierda, encabezados incluidos. */
+.tabla--comparativa td,
+.tabla--comparativa th { text-align: left; }
+.tabla--comparativa th[scope="row"] { color: var(--ink); }
+.tabla--comparativa .es-nulo { color: var(--ink-mute); }
+
+.card--cotiza, .card--noche { padding: 20px; gap: 12px; }
+.card--noche { border-color: var(--line-accent); }
+.card__title--grande {
+  font-family: var(--f-display); font-size: 24px;
+  letter-spacing: 0; text-transform: none; color: var(--ink);
+  margin: 0;
+}
+.lista-cotiza {
+  margin: 0; padding: 0; list-style: none;
+  display: flex; flex-direction: column; gap: 8px;
+  font-size: 15px; color: var(--ink-soft);
+}
+.lista-cotiza li { position: relative; padding-left: 22px; line-height: 1.45; }
+.lista-cotiza li::before {
+  content: "·"; position: absolute; left: 6px; top: -.15em;
+  color: var(--accent); font-weight: 700; font-size: 20px;
+}
+.card--cotiza .action, .card--noche .action { margin-top: auto; }
+
+/* Las tarjetas de una fila se estiran a la misma altura; empujar los precios
+   al fondo hace que queden alineados aunque un título ocupe dos líneas
+   (le pasa a "PlayStation 5 Pro" con la etiqueta Próximamente al lado). */
+.grid--stations .card .prices,
+.grid--stations .card .rows { margin-top: auto; }
