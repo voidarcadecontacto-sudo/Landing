@@ -53,7 +53,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "EntertainmentBusiness"],
+      "@type": [
+        "LocalBusiness",
+        "EntertainmentBusiness"
+      ],
       "@id": "https://voidarcadecy.com/#negocio",
       "name": "Void Arcade",
       "alternateName": "Void Arcade Cyber y Sala de Juegos",
@@ -73,28 +76,98 @@
         "addressCountry": "CO"
       },
       "hasMap": "https://maps.app.goo.gl/v4W4zqx5ZFjjnoeG9",
-      "openingHoursSpecification": [{
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "10:00",
-        "closes": "21:00"
-      }],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "21:00"
+        }
+      ],
       "sameAs": [
         "https://www.instagram.com/voidarcadecy/",
         "https://www.tiktok.com/@voidarcadecy",
         "https://www.facebook.com/profile.php?id=61593139452561"
       ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Estaciones de juego por hora",
-        "itemListElement": [
-          { "@type": "Offer", "name": "Xbox 360 · 1 jugador · 1 hora", "price": "3000", "priceCurrency": "COP" },
-          { "@type": "Offer", "name": "Xbox Series S · 1 jugador · 1 hora", "price": "7000", "priceCurrency": "COP" },
-          { "@type": "Offer", "name": "Nintendo Switch 2 · 1 jugador · 1 hora", "price": "7000", "priceCurrency": "COP" },
-          { "@type": "Offer", "name": "PC Gamer · 1 jugador · 1 hora", "price": "7000", "priceCurrency": "COP" },
-          { "@type": "Offer", "name": "Simulador de carreras · 15 minutos", "price": "4000", "priceCurrency": "COP" }
-        ]
-      }
+      "hasOfferCatalog": [
+        {
+          "@type": "OfferCatalog",
+          "name": "Estaciones de juego por hora",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Xbox 360 · 1 jugador · 1 hora",
+              "price": "3000",
+              "priceCurrency": "COP"
+            },
+            {
+              "@type": "Offer",
+              "name": "Xbox Series S · 1 jugador · 1 hora",
+              "price": "7000",
+              "priceCurrency": "COP"
+            },
+            {
+              "@type": "Offer",
+              "name": "Nintendo Switch 2 · 1 jugador · 1 hora",
+              "price": "7000",
+              "priceCurrency": "COP"
+            },
+            {
+              "@type": "Offer",
+              "name": "PC Gamer · 1 jugador · 1 hora",
+              "price": "7000",
+              "priceCurrency": "COP"
+            },
+            {
+              "@type": "Offer",
+              "name": "Simulador de carreras · 15 minutos",
+              "price": "4000",
+              "priceCurrency": "COP"
+            },
+            {
+              "@type": "Offer",
+              "name": "Alquiler de juegos de mesa",
+              "price": "15000",
+              "priceCurrency": "COP"
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Void Arcade Party — fiestas y eventos privados",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Paquete Alfa — hasta 10 personas, 3 horas",
+              "description": "Local privado, mini torneo, challenge del simulador y fotos grupales.",
+              "price": "350000",
+              "priceCurrency": "COP"
+            },
+            {
+              "@type": "Offer",
+              "name": "Paquete Beta — hasta 14 personas, 4 horas",
+              "description": "Local privado, torneo organizado, challenge del simulador, bebida y snack por persona, video resumen.",
+              "price": "600000",
+              "priceCurrency": "COP"
+            },
+            {
+              "@type": "Offer",
+              "name": "Paquete Gamma — hasta 18 personas, 5 horas",
+              "description": "Local privado, torneo principal y mini torneo, bebida y dos snacks por persona, video del evento y premio.",
+              "price": "850000",
+              "priceCurrency": "COP"
+            }
+          ]
+        }
+      ]
     },
     {
       "@type": "Event",
@@ -116,7 +189,9 @@
           "addressCountry": "CO"
         }
       },
-      "organizer": { "@id": "https://voidarcadecy.com/#negocio" },
+      "organizer": {
+        "@id": "https://voidarcadecy.com/#negocio"
+      },
       "offers": {
         "@type": "Offer",
         "name": "Inscripción al torneo",
@@ -133,7 +208,9 @@
       "url": "https://voidarcadecy.com/",
       "name": "Void Arcade",
       "inLanguage": "es-CO",
-      "publisher": { "@id": "https://voidarcadecy.com/#negocio" }
+      "publisher": {
+        "@id": "https://voidarcadecy.com/#negocio"
+      }
     }
   ]
 }
@@ -151,6 +228,7 @@
   <symbol id="i-ig" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2 0 1.8.2 2.2.4.6.2 1 .5 1.4 1 .5.4.8.8 1 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-1 1.4-.4.5-.8.8-1.4 1-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-1-.5-.4-.8-.8-1-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 1-1.4.4-.5.8-.8 1.4-1 .4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 3.4A6.4 6.4 0 1 0 18.4 12 6.4 6.4 0 0 0 12 5.6Zm0 10.6A4.2 4.2 0 1 1 16.2 12 4.2 4.2 0 0 1 12 16.2Zm6.7-10.9a1.5 1.5 0 1 1-1.5-1.5 1.5 1.5 0 0 1 1.5 1.5Z"/></symbol>
   <symbol id="i-tt" viewBox="0 0 24 24"><path d="M16.5 2h-3v13.2a2.6 2.6 0 1 1-2.2-2.6V9.5a5.8 5.8 0 1 0 5.2 5.7V8.9A6.6 6.6 0 0 0 20.5 10V7a3.9 3.9 0 0 1-4-5Z"/></symbol>
   <symbol id="i-fb" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></symbol>
+  <symbol id="i-party" viewBox="0 0 24 24"><path d="M12 1.5c.8 1 1.2 1.6 1.2 2.2a1.2 1.2 0 0 1-2.4 0c0-.6.4-1.2 1.2-2.2ZM11.2 5h1.6v3h-1.6V5ZM6 9h12a2 2 0 0 1 2 2v2.2c-1.1 0-1.6-.9-2.7-.9s-1.6.9-2.7.9-1.6-.9-2.6-.9-1.6.9-2.7.9-1.6-.9-2.6-.9c-1.1 0-1.6.9-2.7.9V11a2 2 0 0 1 2-2ZM4 15.4c1.1 0 1.6-.9 2.7-.9s1.6.9 2.6.9 1.6-.9 2.7-.9 1.6.9 2.6.9 1.6-.9 2.7-.9 1.6.9 2.7.9V21a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-5.6Z"/></symbol>
   <symbol id="i-cal" viewBox="0 0 24 24"><path d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7ZM5 9h14v11H5V9Zm2.5 2v2h2v-2h-2Zm4.5 0v2h2v-2h-2Z"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17.1 5.9 20.5l1.4-6.8L2.2 9.1l6.9-.8L12 2Z"/></symbol>
@@ -167,6 +245,7 @@
       <a class="nav__link" href="#menu">Menú</a>
       <a class="nav__link" href="#horarios">Horarios</a>
       <a class="nav__link" href="#galeria">Fotos</a>
+      <a class="nav__link" href="#fiestas">Fiestas</a>
       <a class="nav__link" href="#reservas">Reservas</a>
       <a class="nav__link" href="#ubicacion">Ubicación</a>
     </div>
@@ -211,6 +290,10 @@
       <a class="action" href="https://www.facebook.com/profile.php?id=61593139452561" target="_blank" rel="noopener">
         <svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-fb"/></svg>
         <span class="action__label">Facebook</span><span class="action__arrow">→</span>
+      </a>
+      <a class="action" href="#fiestas">
+        <svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-party"/></svg>
+        <span class="action__label">Fiestas y eventos privados</span><span class="action__arrow">→</span>
       </a>
       <a class="action" href="#reservas">
         <svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-cal"/></svg>
@@ -273,14 +356,40 @@
 
         <article class="card card--soon">
           <div class="card__head">
-            <h4 class="card__name">PlayStation 5</h4>
-            <span class="tag">No disponible</span>
+            <h4 class="card__name">Xbox Series X</h4>
+            <span class="tag">Próximamente</span>
           </div>
           <div class="prices">
-            <div class="price"><span class="price__label">1 JUG.</span><span class="price__value">$8.000</span></div>
-            <div class="price"><span class="price__label">2 JUG.</span><span class="price__value">$9.000</span></div>
-            <div class="price"><span class="price__label">3 JUG.</span><span class="price__value">$10.000</span></div>
-            <div class="price"><span class="price__label">4 JUG.</span><span class="price__value">$11.000</span></div>
+            <div class="price"><span class="price__label">1 JUG.</span><span class="price__value">$9.000</span></div>
+            <div class="price"><span class="price__label">2 JUG.</span><span class="price__value">$10.000</span></div>
+            <div class="price"><span class="price__label">3 JUG.</span><span class="price__value">$11.000</span></div>
+            <div class="price"><span class="price__label">4 JUG.</span><span class="price__value">$12.000</span></div>
+          </div>
+        </article>
+
+        <article class="card card--soon">
+          <div class="card__head">
+            <h4 class="card__name">PlayStation 5</h4>
+            <span class="tag">Próximamente</span>
+          </div>
+          <div class="prices">
+            <div class="price"><span class="price__label">1 JUG.</span><span class="price__value">$9.000</span></div>
+            <div class="price"><span class="price__label">2 JUG.</span><span class="price__value">$10.000</span></div>
+            <div class="price"><span class="price__label">3 JUG.</span><span class="price__value">$11.000</span></div>
+            <div class="price"><span class="price__label">4 JUG.</span><span class="price__value">$12.000</span></div>
+          </div>
+        </article>
+
+        <article class="card card--soon">
+          <div class="card__head">
+            <h4 class="card__name">PlayStation 5 Pro</h4>
+            <span class="tag">Próximamente</span>
+          </div>
+          <div class="prices">
+            <div class="price"><span class="price__label">1 JUG.</span><span class="price__value">$11.000</span></div>
+            <div class="price"><span class="price__label">2 JUG.</span><span class="price__value">$12.000</span></div>
+            <div class="price"><span class="price__label">3 JUG.</span><span class="price__value">$13.000</span></div>
+            <div class="price"><span class="price__label">4 JUG.</span><span class="price__value">$14.000</span></div>
           </div>
         </article>
 
@@ -310,7 +419,34 @@
       <article class="card card--sim">
         <div class="sub">
           <h3 class="sub__title">Simulador</h3>
-          <span class="sub__note">De carreras</span>
+          <span class="sub__note">Sim racing</span>
+        </div>
+        <div class="prices">
+          <div class="price"><span class="price__label">15 MIN</span><span class="price__value">$4.000</span></div>
+          <div class="price"><span class="price__label">30 MIN</span><span class="price__value">$7.000</span></div>
+          <div class="price"><span class="price__label">1 HORA</span><span class="price__value">$12.000</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="grid grid--split">
+      <article class="card">
+        <div class="sub">
+          <h3 class="sub__title">Juegos de mesa</h3>
+          <span class="sub__note">Alquiler</span>
+        </div>
+        <div class="rows">
+          <div class="row">
+            <span class="row__name">Alquiler de juegos de mesa</span>
+            <span class="pill"><span class="price__value">$15.000</span></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--soon">
+        <div class="card__head">
+          <h3 class="sub__title">Simulador VR</h3>
+          <span class="tag">Próximamente</span>
         </div>
         <div class="prices">
           <div class="price"><span class="price__label">15 MIN</span><span class="price__value">$4.000</span></div>
@@ -322,8 +458,44 @@
 
     <div class="block">
       <div class="sub">
+        <h3 class="sub__title">Esports</h3>
+        <span class="sub__note">Próximamente · Por hora</span>
+      </div>
+      <div class="grid grid--stations">
+        <article class="card card--soon">
+          <h4 class="card__name">PC Gamer</h4>
+          <div class="rows">
+            <div class="row">
+              <span class="row__name">Estación esports</span>
+              <span class="pill"><span class="price__value">$20.000</span></span>
+            </div>
+          </div>
+        </article>
+        <article class="card card--soon">
+          <h4 class="card__name">Xbox Series X</h4>
+          <div class="rows">
+            <div class="row">
+              <span class="row__name">+ Control profesional</span>
+              <span class="pill"><span class="price__value">$12.000</span></span>
+            </div>
+          </div>
+        </article>
+        <article class="card card--soon">
+          <h4 class="card__name">PlayStation 5</h4>
+          <div class="rows">
+            <div class="row">
+              <span class="row__name">+ Control profesional</span>
+              <span class="pill"><span class="price__value">$12.000</span></span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="sub">
         <h3 class="sub__title">Paquetes por horas</h3>
-        <span class="sub__note">1 jugador · Ahorra hasta 20% con 3 horas</span>
+        <span class="sub__note">1 jugador · Ahorra hasta 17% con 3 horas</span>
       </div>
       <div class="table-wrap">
         <table class="table">
@@ -340,7 +512,6 @@
             <tr><th scope="row">Xbox 360</th><td>$3.000</td><td>$5.500</td><td class="is-best">$7.500</td></tr>
             <tr><th scope="row">Xbox Series S</th><td>$7.000</td><td>$12.000</td><td class="is-best">$18.000</td></tr>
             <tr><th scope="row">Nintendo Switch 2</th><td>$7.000</td><td>$12.000</td><td class="is-best">$18.000</td></tr>
-            <tr class="is-off"><th scope="row">PlayStation 5</th><td colspan="3">No disponible por ahora</td></tr>
             <tr><th scope="row">PC Gamer 1</th><td>$7.000</td><td>$12.000</td><td class="is-best">$18.000</td></tr>
             <tr><th scope="row">PC Gamer 2</th><td>$9.000</td><td>$16.000</td><td class="is-best">$22.000</td></tr>
           </tbody>
@@ -412,7 +583,6 @@
         <h3 class="card__title">Dulces y chocolates</h3>
         <div class="items">
           <div class="item"><span class="item__name">Gol</span><span class="item__price">$2.200</span></div>
-          <div class="item"><span class="item__name">Gol Mini</span><span class="item__price">$1.500</span></div>
           <div class="item"><span class="item__name">Bombombum</span><span class="item__price">$800</span></div>
           <div class="item"><span class="item__name">Revolcón Caramelo</span><span class="item__price">$400</span></div>
           <div class="item"><span class="item__name">Revolcón Chicle</span><span class="item__price">$400</span></div>
@@ -586,13 +756,138 @@
   </div>
 </section>
 
+<!-- ===================== FIESTAS Y EVENTOS ===================== -->
+<section class="section" id="fiestas" aria-labelledby="t-fiestas">
+  <div class="wrap section__stack">
+    <div class="section__head">
+      <p class="eyebrow">Fiestas y eventos privados</p>
+      <h2 class="section__title" id="t-fiestas">VOID ARCADE <span class="titulo-acento">PARTY</span></h2>
+      <p class="lead lead--ancho">Celebraciones con el local privado, torneos organizados, challenge del simulador, música, luces y un anfitrión VOID que dirige toda la fiesta de principio a fin.</p>
+    </div>
+
+    <div class="grid grid--paquetes">
+      <article class="paquete">
+        <p class="paquete__nombre">Paquete Alfa</p>
+        <p class="paquete__precio">$350.000</p>
+        <p class="paquete__meta">Hasta 10 personas · 3 horas</p>
+        <ul class="paquete__lista">
+          <li>Local para ustedes solos</li>
+          <li>Mini torneo</li>
+          <li>Challenge del simulador</li>
+          <li>Fotos grupales</li>
+        </ul>
+        <p class="paquete__abono">Reservas con <strong>$105.000</strong></p>
+      </article>
+
+      <article class="paquete paquete--destacado">
+        <p class="paquete__etiqueta">El más pedido</p>
+        <p class="paquete__nombre">Paquete Beta</p>
+        <p class="paquete__precio">$600.000</p>
+        <p class="paquete__meta">Hasta 14 personas · 4 horas</p>
+        <ul class="paquete__lista">
+          <li>Local para ustedes solos</li>
+          <li>Torneo organizado</li>
+          <li>Challenge del simulador</li>
+          <li>1 bebida y 1 snack por persona</li>
+          <li>Video resumen corto</li>
+        </ul>
+        <p class="paquete__abono">Reservas con <strong>$180.000</strong></p>
+      </article>
+
+      <article class="paquete">
+        <p class="paquete__nombre">Paquete Gamma</p>
+        <p class="paquete__precio">$850.000</p>
+        <p class="paquete__meta">Hasta 18 personas · 5 horas</p>
+        <ul class="paquete__lista">
+          <li>Local para ustedes solos</li>
+          <li>Torneo principal + mini torneo</li>
+          <li>Challenge del simulador</li>
+          <li>1 bebida y 2 snacks por persona</li>
+          <li>Video resumen del evento</li>
+          <li>Pin o llavero de premio</li>
+        </ul>
+        <p class="paquete__abono">Reservas con <strong>$255.000</strong></p>
+      </article>
+    </div>
+
+    <div class="block">
+      <div class="sub">
+        <h3 class="sub__title">Qué incluye cada uno</h3>
+        <span class="sub__note">Comparación completa</span>
+      </div>
+      <div class="table-wrap">
+        <table class="table tabla--comparativa">
+          <thead>
+            <tr>
+              <th scope="col">Característica</th>
+              <th scope="col">Alfa</th>
+              <th scope="col" class="is-best">Beta</th>
+              <th scope="col">Gamma</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Precio</th><td>$350.000</td><td class="is-best">$600.000</td><td>$850.000</td></tr>
+            <tr><th scope="row">Personas</th><td>Hasta 10</td><td>Hasta 14</td><td>Hasta 18</td></tr>
+            <tr><th scope="row">Duración</th><td>3 horas</td><td>4 horas</td><td>5 horas</td></tr>
+            <tr><th scope="row">Uso privado</th><td>Sí</td><td>Sí</td><td>Sí</td></tr>
+            <tr><th scope="row">Torneo</th><td>Mini torneo</td><td>Torneo organizado</td><td>Torneo principal + mini torneo</td></tr>
+            <tr><th scope="row">Challenge del simulador</th><td>Sí</td><td>Sí</td><td>Sí</td></tr>
+            <tr><th scope="row">Bebidas</th><td class="es-nulo">No incluye</td><td>1 por persona</td><td>1 por persona</td></tr>
+            <tr><th scope="row">Snacks</th><td class="es-nulo">No incluye</td><td>1 por persona</td><td>2 por persona</td></tr>
+            <tr><th scope="row">Premios</th><td>Tiempo de juego</td><td>Tiempo de juego + snacks</td><td>Tiempo de juego + snack + pin o llavero</td></tr>
+            <tr><th scope="row">Fotos y video</th><td>Fotos grupales</td><td>Fotos y video resumen corto</td><td>Fotos y video resumen del evento</td></tr>
+            <tr><th scope="row">Abono para reservar</th><td>$105.000</td><td class="is-best">$180.000</td><td>$255.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">
+        Se reserva con el <strong>30%</strong> y el resto se paga el día del evento.
+        ¿Prefieres verlo en PDF? Descarga la
+        <a href="/docs/fiestas-eventos.pdf" target="_blank" rel="noopener">propuesta de fiestas y eventos</a>.
+      </p>
+    </div>
+
+    <div class="grid grid--split">
+      <article class="card card--cotiza">
+        <h3 class="card__title">¿Ninguno te encaja? Te cotizamos a la medida</h3>
+        <p class="note">Estos son los planes predeterminados, pero armamos una cotización personalizada para que pagues solo por lo que de verdad necesitas. Cuéntanos:</p>
+        <ul class="lista-cotiza">
+          <li>Cuántas personas o niños asistirían, y qué edades tienen</li>
+          <li>Cuántas horas necesitan el espacio</li>
+          <li>La fecha y la hora del evento</li>
+          <li>Si lo quieren completamente privado</li>
+          <li>Si desean torneo organizado, challenge del simulador, premios, música, fotos o video</li>
+          <li>Cómo quieren la decoración</li>
+          <li>Si ustedes llevan la torta, bebidas, snacks y comida, o prefieren que nos encarguemos</li>
+        </ul>
+        <p class="note">Normalmente los anfitriones traen la torta y la comida, pero también podemos gestionarlo y sumarlo a la cotización. Y si quieres conocer el lugar antes, pasa a visitarnos: coordinamos el día que te sirva.</p>
+        <a class="action action--primary" href="https://wa.me/573103420856?text=%C2%A1Hola%20Void%20Arcade!%20Quiero%20cotizar%20una%20fiesta%20o%20evento%20privado." target="_blank" rel="noopener">
+          <svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
+          <span class="action__label">Pedir cotización personalizada</span><span class="action__arrow">→</span>
+        </a>
+      </article>
+
+      <article class="card card--noche">
+        <p class="eyebrow">Bajo reserva</p>
+        <h3 class="card__title card__title--grande">Party LAN nocturna</h3>
+        <p class="note">Noches de LAN con el local para tu grupo, después de las 11:00 p.m. Se agenda con anticipación y aplica un recargo por horario nocturno.</p>
+        <p class="note">Escríbenos con el número de personas y las horas que quieren, y te pasamos el valor.</p>
+        <a class="action" href="https://wa.me/573103420856?text=%C2%A1Hola%20Void%20Arcade!%20Quiero%20cotizar%20una%20Party%20LAN%20nocturna." target="_blank" rel="noopener">
+          <svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
+          <span class="action__label">Cotizar LAN nocturna</span><span class="action__arrow">→</span>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== RESERVAS ===================== -->
 <section class="section" id="reservas" aria-labelledby="t-reservas">
   <div class="wrap split">
     <div class="block">
       <p class="eyebrow">Reservas y alquiler</p>
       <h2 class="section__title" id="t-reservas">APARTA TU<br>ESTACIÓN</h2>
-      <p class="lead">Llena los datos y te llegamos por WhatsApp para confirmar. También alquilamos el local completo para cumpleaños, torneos y eventos privados.</p>
+      <p class="lead">Llena los datos y te llegamos por WhatsApp para confirmar. También alquilamos el local completo: mira los <a href="#fiestas">paquetes de fiestas y eventos</a>.</p>
       <div class="steps">
         <p class="step"><span class="step__n">01</span><span class="step__text">Cupo para grupos: consolas hasta 4 jugadores por estación.</span></p>
         <p class="step"><span class="step__n">02</span><span class="step__text">Alquiler del local: pantallas, sonido, consolas y barra de snacks incluidos.</span></p>
@@ -628,6 +923,9 @@
           <label class="option"><input type="radio" name="servicio" value="Nintendo Switch 2"><span>Nintendo Switch 2</span></label>
           <label class="option"><input type="radio" name="servicio" value="PC Gamer"><span>PC Gamer</span></label>
           <label class="option"><input type="radio" name="servicio" value="Simulador"><span>Simulador</span></label>
+          <label class="option"><input type="radio" name="servicio" value="Juegos de mesa"><span>Juegos de mesa</span></label>
+          <label class="option"><input type="radio" name="servicio" value="Fiesta o evento privado"><span>Fiesta o evento</span></label>
+          <label class="option"><input type="radio" name="servicio" value="Party LAN nocturna"><span>Party LAN nocturna</span></label>
           <label class="option"><input type="radio" name="servicio" value="Alquiler del local"><span>Alquiler del local</span></label>
         </div>
       </fieldset>

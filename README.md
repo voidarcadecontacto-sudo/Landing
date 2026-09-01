@@ -124,8 +124,22 @@ El certificado HTTPS se emite solo. No compres SSL en Hostinger: no hace falta.
 ## Cómo cambiar cosas
 
 **Precios, productos, horarios** → están en `public/index.html` como texto normal.
-Ojo: los precios de tarifas aparecen en **dos** lugares — las tarjetas de estaciones
-y la tabla de paquetes por horas. Cambia ambos.
+
+Ojo con los precios que aparecen **repetidos**. Si cambias uno, cambia el otro:
+
+| Precio | Aparece en |
+|---|---|
+| Tarifas por hora | Tarjetas de estaciones **y** tabla de paquetes por horas |
+| Paquetes de fiesta | Tarjetas Alfa/Beta/Gamma **y** tabla comparativa |
+| Abono del 30% | Tarjetas de fiesta **y** última fila de la tabla comparativa |
+
+Los precios también están en los datos estructurados (el bloque `application/ld+json`
+al inicio del archivo). Eso es lo que Google lee: si cambias un precio importante,
+actualízalo ahí también.
+
+**PDFs de menús y fiestas** → reemplaza los archivos en `public/docs/` manteniendo
+el mismo nombre (`menu-juegos.pdf`, `menu-comidas.pdf`, `fiestas-eventos.pdf`) y los
+enlaces siguen funcionando solos.
 
 **Colores** → arriba de `public/css/styles.css`, en el bloque `:root`.
 
