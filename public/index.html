@@ -212,10 +212,47 @@
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Halloween en Void Arcade — Juega, suma puntos y gana",
+  "description": "Jornada de retos de terror en dificultad máxima (Phasmophobia, R.E.P.O. y The Headliners). Competencia individual por puntos. Participación gratuita y sin inscripción. Premios de tiempo de juego, snacks, dulces y descuentos.",
+  "startDate": "2026-10-31T12:00:00-05:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "isAccessibleForFree": true,
+  "image": "https://voidarcadecy.com/img/og.jpg",
+  "location": {
+    "@type": "Place",
+    "name": "Void Arcade (segundo piso)",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 4 #3-81, Segundo piso",
+      "addressLocality": "Facatativá",
+      "addressRegion": "Cundinamarca",
+      "addressCountry": "CO"
+    }
+  },
+  "organizer": { "@id": "https://voidarcadecy.com/#negocio" },
+  "offers": {
+    "@type": "Offer",
+    "name": "Participación gratuita",
+    "price": "0",
+    "priceCurrency": "COP",
+    "availability": "https://schema.org/InStock",
+    "url": "https://voidarcadecy.com/#halloween"
+  }
+}
+</script>
 </head>
-<body>
+<body class="hw">
 
 <a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- Niebla ambiental de Halloween (puramente decorativa) -->
+<div class="hw-fog" aria-hidden="true"></div>
 
 <!-- Sprite de iconos: cada trazado se define una vez y se reutiliza con <use> -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -229,7 +266,16 @@
   <symbol id="i-cal" viewBox="0 0 24 24"><path d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7ZM5 9h14v11H5V9Zm2.5 2v2h2v-2h-2Zm4.5 0v2h2v-2h-2Z"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17.1 5.9 20.5l1.4-6.8L2.2 9.1l6.9-.8L12 2Z"/></symbol>
+  <symbol id="i-ghost" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8v11l2.3-1.8L8.5 21l2.2-1.8L12 21l1.3-1.8L15.5 21l2.2-1.8L20 21V10a8 8 0 0 0-8-8Zm-3 7.5a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Zm6 0a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6Z"/></symbol>
+  <symbol id="i-pumpkin" viewBox="0 0 24 24"><path d="M12 3c.6-1 1.6-1.6 2.7-1.6V3c-.7 0-1.2.3-1.5.9 3.3.3 5.8 3.2 5.8 7.1 0 4.2-2.7 8-6.9 8s-6.9-3.8-6.9-8c0-3.6 2.2-6.4 5.2-7l.3-.1Zm-3 6.2 1.8 2.2h-3.6L9 9.2Zm6 0 1.8 2.2h-3.6L15 9.2Zm-5.4 4.3h6.8c-.3 1.9-1.6 3.2-3.4 3.2s-3.1-1.3-3.4-3.2Z"/></symbol>
 </svg>
+
+<!-- ===================== AVISO HALLOWEEN ===================== -->
+<a class="hw-aviso" href="#halloween">
+  <span class="hw-aviso__ico" aria-hidden="true">🎃</span>
+  <span class="hw-aviso__text"><strong>Halloween en Void Arcade</strong> · 31 de octubre desde las 12:00 p. m. · Juega, suma puntos y gana</span>
+  <span class="hw-aviso__cta">Ver evento →</span>
+</a>
 
 <nav class="nav" aria-label="Navegación principal">
   <div class="nav__inner wrap">
@@ -238,6 +284,7 @@
       <span class="nav__name">Void Arcade</span>
     </a>
     <div class="nav__links">
+      <a class="nav__link nav__link--hw" href="#halloween">🎃 Evento Halloween</a>
       <a class="nav__link" href="#tarifas">Tarifas</a>
       <a class="nav__link" href="#menu">Menú</a>
       <a class="nav__link" href="#horarios">Horarios</a>
@@ -305,6 +352,60 @@
 </header>
 
 <main id="contenido">
+
+<!-- ===================== EVENTO HALLOWEEN ===================== -->
+<section class="section hw-event" id="halloween" aria-labelledby="t-halloween">
+  <span class="hw-web hw-web--tl" aria-hidden="true"></span>
+  <span class="hw-web hw-web--tr" aria-hidden="true"></span>
+  <div class="wrap section__stack">
+    <div class="section__head hw-event__head">
+      <p class="eyebrow hw-event__eyebrow">🎃 Halloween en Void Arcade</p>
+      <h2 class="section__title hw-event__title" id="t-halloween">JUEGA, SUMA<br>PUNTOS Y <span>GANA</span></h2>
+    </div>
+
+    <div class="hw-facts">
+      <p class="hw-fact"><span class="hw-fact__ico" aria-hidden="true">📅</span><span><strong>31 de octubre</strong></span></p>
+      <p class="hw-fact"><span class="hw-fact__ico" aria-hidden="true">🕛</span><span>Desde las <strong>12:00 p. m.</strong></span></p>
+      <p class="hw-fact"><span class="hw-fact__ico" aria-hidden="true">📍</span><span>Calle 4 #3-81 · Segundo piso</span></p>
+      <p class="hw-fact"><span class="hw-fact__ico" aria-hidden="true">🎟️</span><span>Participación gratuita · Sin inscripción</span></p>
+    </div>
+
+    <div class="grid grid--split">
+      <article class="card hw-card">
+        <h3 class="card__title">Una jornada de retos en dificultad máxima</h3>
+        <ul class="hw-retos">
+          <li><strong>Phasmophobia:</strong> identifica fantasmas, demuestra tu velocidad y acumula puntos.</li>
+          <li><strong>R.E.P.O.:</strong> llega lo más lejos posible y suma puntos.</li>
+          <li><strong>The Headliners:</strong> enfrenta los retos de terror y sigue sumando.</li>
+        </ul>
+      </article>
+
+      <article class="card hw-card">
+        <h3 class="card__title">¿Cómo funciona?</h3>
+        <p class="note">La competencia es individual. Cada participante acumula puntos durante el evento y, al finalizar, quienes tengan más puntos recibirán premios. Aunque un reto se juegue en grupo, el puntaje será individual.</p>
+      </article>
+    </div>
+
+    <div class="grid grid--split">
+      <article class="card hw-card hw-card--premios">
+        <h3 class="card__title">🏆 Premios</h3>
+        <p class="note">Principalmente <strong>tiempo de juego</strong>, además de snacks como <strong>ramen, bubble tea y papas</strong>.</p>
+        <p class="note">También tendremos <strong>dulces</strong> y <strong>descuentos en tiempo de juego</strong>.</p>
+      </article>
+
+      <article class="card hw-card hw-card--cta">
+        <h3 class="card__title">¿Tienes dudas?</h3>
+        <p class="note">Escríbenos y resolvemos todo sobre la jornada de Halloween del 31 de octubre.</p>
+        <a class="action action--primary hw-cta" href="https://wa.me/573103420856?text=%C2%A1Hola%2C%20Void%20Arcade%21%20%F0%9F%8E%83%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20evento%20de%20Halloween%20del%2031%20de%20octubre." target="_blank" rel="noopener">
+          <svg width="20" height="20" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
+          <span class="action__label">Consultar por WhatsApp</span><span class="action__arrow">→</span>
+        </a>
+      </article>
+    </div>
+
+    <p class="note hw-aclaracion">La participación en el evento es gratuita y no requiere inscripción. Esto corresponde únicamente al evento y no implica tiempo de juego ilimitado gratis: las <a href="#tarifas">tarifas de juego</a> habituales siguen vigentes fuera de la dinámica del evento.</p>
+  </div>
+</section>
 
 <!-- ===================== TARIFAS ===================== -->
 <section class="section" id="tarifas" aria-labelledby="t-tarifas">
@@ -1000,6 +1101,12 @@
     <p class="footer__legal">© 2026 Void Arcade · Precios en pesos colombianos</p>
   </div>
 </footer>
+
+<!-- Botón flotante de WhatsApp (mensaje del evento de Halloween) -->
+<a class="wa-float" href="https://wa.me/573103420856?text=%C2%A1Hola%2C%20Void%20Arcade%21%20%F0%9F%8E%83%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20evento%20de%20Halloween%20del%2031%20de%20octubre." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp sobre el evento de Halloween">
+  <svg width="28" height="28" fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>
+  <span class="wa-float__pumpkin" aria-hidden="true">🎃</span>
+</a>
 
 <script src="/js/reservas.js" defer></script>
 </body>

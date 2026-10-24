@@ -580,3 +580,169 @@ input:focus-visible,
    (le pasa a "PlayStation 5 Pro" con la etiqueta Próximamente al lado). */
 .grid--stations .card .prices,
 .grid--stations .card .rows { margin-top: auto; }
+
+/* ==========================================================================
+   TEMA HALLOWEEN — aditivo. Conserva la identidad Void Arcade (naranja)
+   y suma acentos morado y verde neón, niebla, telarañas y detalles de terror.
+   Todo respeta prefers-reduced-motion (ver bloque al final).
+   ========================================================================== */
+:root {
+  --hw-purple:   #9B5Cff;
+  --hw-purple-d: #6a2fd0;
+  --hw-green:    #8dff5c;
+  --hw-green-d:  #4fcf6a;
+  --hw-web: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27120%27%20height%3D%27120%27%20viewBox%3D%270%200%20120%20120%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27rgba%28198%2C170%2C255%2C0.45%29%27%20stroke-width%3D%271%27%3E%3Cpath%20d%3D%27M0%200%20L120%2026%20M0%200%20L95%2050%20M0%200%20L68%2068%20M0%200%20L50%2095%20M0%200%20L26%20120%27%2F%3E%3Cpath%20d%3D%27M26%205%20Q18%2018%205%2026%27%2F%3E%3Cpath%20d%3D%27M52%209%20Q35%2035%209%2052%27%2F%3E%3Cpath%20d%3D%27M80%2014%20Q52%2052%2014%2080%27%2F%3E%3Cpath%20d%3D%27M108%2018%20Q66%2066%2018%20108%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+/* Ambiente: oscurecer un poco el fondo global y teñir con morado/verde sutil */
+body.hw {
+  background:
+    radial-gradient(90% 60% at 100% 0%, rgba(155,92,255,.10) 0%, transparent 55%),
+    radial-gradient(80% 60% at 0% 100%, rgba(79,207,106,.07) 0%, transparent 55%),
+    var(--bg);
+  background-attachment: fixed;
+}
+
+/* --- Niebla ambiental ---------------------------------------------------- */
+.hw-fog {
+  position: fixed; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    radial-gradient(60% 40% at 20% 100%, rgba(155,92,255,.12), transparent 70%),
+    radial-gradient(55% 35% at 85% 95%, rgba(141,255,92,.08), transparent 70%);
+  mix-blend-mode: screen; opacity: .9;
+  animation: hw-fog-drift 26s ease-in-out infinite alternate;
+}
+@keyframes hw-fog-drift {
+  0%   { transform: translate3d(-3%, 2%, 0) scale(1.05); }
+  100% { transform: translate3d(3%, -2%, 0) scale(1.12); }
+}
+
+/* La niebla va detrás del contenido; nav, aviso y botón flotante por encima */
+.nav, .hw-aviso, main, .footer, .wa-float { position: relative; z-index: 2; }
+
+/* --- Aviso superior ------------------------------------------------------ */
+.hw-aviso {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  flex-wrap: wrap; text-align: center;
+  padding: 9px 16px; color: var(--ink);
+  background: linear-gradient(90deg, var(--hw-purple-d), var(--accent-deep) 50%, var(--hw-purple-d));
+  border-bottom: 1px solid rgba(155,92,255,.5);
+  font-family: var(--f-cond); font-weight: 600; letter-spacing: .04em;
+  font-size: 14px; line-height: 1.3;
+}
+.hw-aviso:hover { color: var(--ink); }
+.hw-aviso__ico { font-size: 18px; }
+.hw-aviso__cta {
+  font-weight: 700; color: var(--hw-green);
+  text-transform: uppercase; letter-spacing: .12em; font-size: 13px; white-space: nowrap;
+}
+
+/* --- Enlace de navegación destacado ------------------------------------- */
+.nav__link--hw {
+  color: var(--hw-green); border: 1px solid rgba(141,255,92,.4);
+}
+.nav__link--hw:hover {
+  color: var(--bg); background: var(--hw-green); border-color: var(--hw-green);
+}
+
+/* --- Sección del evento -------------------------------------------------- */
+.hw-event {
+  position: relative; overflow: hidden;
+  border-top: 1px solid rgba(155,92,255,.35);
+  background:
+    radial-gradient(100% 80% at 50% 0%, rgba(155,92,255,.16) 0%, transparent 60%),
+    var(--bg-alt);
+}
+.hw-event__eyebrow { color: var(--hw-green); }
+.hw-event__title span { color: var(--hw-purple); }
+.hw-event__title {
+  text-shadow: 0 0 22px rgba(155,92,255,.35);
+}
+
+/* Telarañas en las esquinas superiores de la sección */
+.hw-web {
+  position: absolute; top: 0; width: 120px; height: 120px;
+  background: var(--hw-web) no-repeat; background-size: contain;
+  opacity: .55; pointer-events: none; z-index: 1;
+}
+.hw-web--tl { left: 0; }
+.hw-web--tr { right: 0; transform: scaleX(-1); }
+
+/* Datos clave */
+.hw-facts {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+}
+.hw-fact {
+  display: flex; align-items: center; gap: 10px; margin: 0;
+  padding: 12px 14px; border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid rgba(155,92,255,.28);
+  font-size: 15px; color: var(--ink-soft);
+}
+.hw-fact strong { color: var(--ink); }
+.hw-fact__ico { font-size: 20px; flex: 0 0 auto; }
+
+/* Tarjetas del evento */
+.hw-card { border-color: rgba(155,92,255,.3); }
+.hw-card .card__title { color: var(--ink); }
+.hw-retos {
+  margin: 4px 0 0; padding: 0; list-style: none;
+  display: flex; flex-direction: column; gap: 10px;
+  color: var(--ink-soft); font-size: 15px; line-height: 1.45;
+}
+.hw-retos li { position: relative; padding-left: 24px; }
+.hw-retos li::before {
+  content: "👻"; position: absolute; left: 0; top: 0; font-size: 15px;
+}
+.hw-retos strong { color: var(--hw-green); }
+.hw-card--premios { border-color: rgba(141,255,92,.35); }
+.hw-card--premios strong { color: var(--hw-green); }
+.hw-card--cta { display: flex; flex-direction: column; }
+.hw-cta { margin-top: auto; }
+
+/* Botón CTA del evento con brillo morado */
+.hw-cta.action--primary {
+  background: var(--hw-purple); border-color: var(--hw-purple); color: #fff;
+  box-shadow: 0 10px 30px rgba(155,92,255,.35);
+}
+.hw-cta.action--primary:hover {
+  background: var(--hw-purple-d); border-color: var(--hw-purple-d); color: #fff;
+}
+
+.hw-aclaracion {
+  border-left: 3px solid var(--accent); padding-left: 14px;
+  color: var(--ink-mute);
+}
+
+/* --- Botón flotante de WhatsApp ----------------------------------------- */
+.wa-float {
+  position: fixed; right: 18px; bottom: 18px; z-index: 60;
+  width: 58px; height: 58px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: #25D366; color: #073b1e;
+  box-shadow: 0 8px 24px rgba(0,0,0,.45), 0 0 0 4px rgba(37,211,102,.18);
+  animation: wa-pulse 2.6s ease-in-out infinite;
+}
+.wa-float:hover { color: #073b1e; transform: translateY(-2px); }
+.wa-float__pumpkin {
+  position: absolute; top: -6px; right: -4px; font-size: 20px;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+}
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(0,0,0,.45), 0 0 0 4px rgba(37,211,102,.18); }
+  50%      { box-shadow: 0 8px 24px rgba(0,0,0,.45), 0 0 0 10px rgba(37,211,102,0); }
+}
+
+/* --- Responsive ---------------------------------------------------------- */
+@media (max-width: 520px) {
+  .hw-facts { grid-template-columns: 1fr; }
+  .hw-aviso__cta { display: none; }
+  .hw-web { width: 84px; height: 84px; }
+  .wa-float { width: 52px; height: 52px; right: 14px; bottom: 14px; }
+}
+
+/* --- Movimiento reducido: niebla y botón quietos ------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .hw-fog { animation: none; transform: none; }
+  .wa-float { animation: none; }
+}
